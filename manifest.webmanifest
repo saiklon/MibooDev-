@@ -1,0 +1,19 @@
+{
+  "name": "NANO OS — Music Edition",
+  "short_name": "NANO OS",
+  "description": "Tu música. Tu universo.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101511",
+  "theme_color": "#101511",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/nano-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
