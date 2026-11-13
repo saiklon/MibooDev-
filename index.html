@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d9d9d6">
+  <title>NANO OS — Prototype 001</title>
+  <link rel="stylesheet" href="css/system.css">
+</head>
+<body>
+  <main class="workspace">
+    <header class="intro">
+      <div class="eyebrow">PROJECT NANO LAB <span>·</span> PROTOTYPE 001</div>
+      <h1>NANO <span>OS</span></h1>
+      <p>Una nueva experiencia para el iPod nano de tercera generación.</p>
+    </header>
+    <section class="device-stage" aria-label="Simulador del iPod nano">
+      <div class="device">
+        <div class="device-top"><span class="model-mark"> iPod</span><span class="device-capacity">4 GB</span></div>
+        <div class="screen-frame"><div class="screen" id="screen">
+          <div class="statusbar"><span id="status-title">iPod</span><span class="status-right"><span id="battery">▰▰▰</span> <span id="clock">09:41</span></span></div>
+          <div class="screen-content" id="screen-content"></div><div class="screen-footer" id="screen-footer">MENU</div>
+        </div></div>
+        <div class="clickwheel" id="wheel" aria-label="Rueda de control">
+          <button class="wheel-key key-menu" data-action="menu" aria-label="Menu">MENU</button>
+          <button class="wheel-key key-prev" data-action="prev" aria-label="Anterior">◀◀</button>
+          <button class="wheel-key key-next" data-action="next" aria-label="Siguiente">▶▶</button>
+          <button class="wheel-key key-play" data-action="play" aria-label="Reproducir o pausar">▶Ⅱ</button>
+          <button class="wheel-center" data-action="select" aria-label="Seleccionar"></button>
+        </div>
+        <div class="device-bottom"><span>Designed for NANO LAB</span><span>Model A1236</span></div>
+      </div>
+      <div class="device-caption">INTERACTIVE DEVICE SIMULATOR <span>·</span> Click Wheel + teclado</div>
+    </section>
+    <aside class="help-panel">
+      <div class="panel-heading"><span class="live-dot"></span> CONTROLES</div>
+      <div class="control-grid">
+        <div><kbd>↑</kbd><kbd>↓</kbd><span>Navegar</span></div><div><kbd>Enter</kbd><span>Seleccionar</span></div>
+        <div><kbd>Esc</kbd><span>Volver al menú</span></div><div><kbd>←</kbd><kbd>→</kbd><span>Cambiar / anterior-siguiente</span></div>
+        <div><kbd>Espacio</kbd><span>Reproducir / pausar</span></div><div><kbd>M</kbd><span>Menú principal</span></div>
+      </div>
+      <p class="hint">También puedes hacer clic en los botones de la rueda o arrastrar el dedo alrededor de ella.</p>
+      <div class="panel-divider"></div><div class="panel-heading">ESTADO DEL PROTOTIPO</div>
+      <div class="status-row"><span>Núcleo de navegación</span><b class="ok">ACTIVO</b></div>
+      <div class="status-row"><span>Interfaz gráfica</span><b class="ok">ACTIVA</b></div>
+      <div class="status-row"><span>Hardware real</span><b class="muted">NO CONECTADO</b></div>
+      <div class="version">NANO OS <span>v0.1.0</span> · WEB BUILD</div>
+    </aside>
+  </main>
+  <script src="js/kernel.js"></script>
+</body>
+</html>
