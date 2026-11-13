@@ -3,52 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#111713"><meta name="description" content="NANO OS — Music Edition"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/nano-icon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#d9d9d6">
-  <title>NANO OS — Prototype 001</title>
+  <meta name="theme-color" content="#101511">
+  <meta name="description" content="NANO OS — una experiencia musical portátil inspirada en un icono.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/nano-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/system.css">
+  <title>NANO OS — Music Edition</title>
 </head>
 <body>
-  <main class="workspace">
-    <header class="intro">
-      <div class="eyebrow">NANO LAB <span>·</span> MUSIC EDITION 002</div>
-      <h1>NANO <span>OS</span></h1>
-      <p>Una nueva experiencia musical. Inspirada en un icono, diseñada para escuchar.</p>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./"><span class="brand-mark">N</span><span>NANO <i>OS</i></span></a>
+      <div class="topbar-meta"><span class="online-dot"></span> MUSIC EDITION <span class="topbar-version">V0.2</span><button id="install-button" class="install-button" hidden>Instalar app</button></div>
     </header>
-    <section class="device-stage" aria-label="Simulador del iPod nano">
-      <div class="device">
-        <div class="device-top"><span class="model-mark"> iPod</span><span class="device-capacity">4 GB</span></div>
-        <div class="screen-frame"><div class="screen" id="screen">
-          <div class="statusbar"><span id="status-title">iPod</span><span class="status-right"><span id="battery">▰▰▰</span> <span id="clock">09:41</span></span></div>
-          <div class="screen-content" id="screen-content"></div><div class="screen-footer" id="screen-footer">MENU</div>
-        </div></div>
-        <div class="clickwheel" id="wheel" aria-label="Rueda de control">
-          <button class="wheel-key key-menu" data-action="menu" aria-label="Menu">MENU</button>
-          <button class="wheel-key key-prev" data-action="prev" aria-label="Anterior">◀◀</button>
-          <button class="wheel-key key-next" data-action="next" aria-label="Siguiente">▶▶</button>
-          <button class="wheel-key key-play" data-action="play" aria-label="Reproducir o pausar">▶Ⅱ</button>
-          <button class="wheel-center" data-action="select" aria-label="Seleccionar"></button>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A POCKET-SIZED MUSIC EXPERIENCE</p>
+          <h1>La música,<br><em>en tus manos.</em></h1>
+          <p class="hero-description">Una reinterpretación contemporánea de un icono. Tu colección, tu reproductor y una experiencia diseñada para disfrutar escuchando.</p>
+          <a class="hero-link" href="#library">EXPLORAR MI BIBLIOTECA <span>↓</span></a>
+          <div class="hero-note"><span class="note-line"></span><span>INSPIRADO EN IPOD NANO · REIMAGINADO PARA HOY</span></div>
         </div>
-        <div class="device-bottom"><span>Designed for NANO LAB</span><span>Model A1236</span></div>
-      </div>
-      <div class="device-caption">INTERACTIVE DEVICE SIMULATOR <span>·</span> Click Wheel + teclado</div>
-    </section>
-    <aside class="help-panel">
-      <div class="panel-heading"><span class="live-dot"></span> CONTROLES</div>
-      <div class="control-grid">
-        <div><kbd>↑</kbd><kbd>↓</kbd><span>Navegar</span></div><div><kbd>Enter</kbd><span>Seleccionar</span></div>
-        <div><kbd>Esc</kbd><span>Volver al menú</span></div><div><kbd>←</kbd><kbd>→</kbd><span>Cambiar / anterior-siguiente</span></div>
-        <div><kbd>Espacio</kbd><span>Reproducir / pausar</span></div><div><kbd>M</kbd><span>Menú principal</span></div>
-      </div>
-      <p class="hint">También puedes hacer clic en los botones de la rueda o arrastrar el dedo alrededor de ella.</p>
-      <div class="panel-divider"></div><div class="panel-heading">ESTADO DEL PROTOTIPO</div>
-      <div class="status-row"><span>Núcleo de navegación</span><b class="ok">ACTIVO</b></div>
-      <div class="status-row"><span>Interfaz gráfica</span><b class="ok">ACTIVA</b></div>
-      <div class="status-row"><span>Hardware real</span><b class="muted">NO CONECTADO</b></div>
-      <div class="version">NANO OS <span>v0.1.0</span> · WEB BUILD</div>
-    </aside>
-  </main>
-  <section class="library-panel"><div class="library-heading"><div><div class="panel-heading">YOUR PERSONAL LIBRARY</div><h2>Biblioteca musical</h2><p>Tus canciones se guardan en este dispositivo. No se suben a ningún servidor.</p></div><label class="import-button" for="audio-files">＋ Añadir música</label><input id="audio-files" type="file" accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac" multiple hidden></div><div class="library-stats"><span id="track-count">0 canciones</span><span id="storage-status">ALMACENAMIENTO LOCAL</span></div><div id="track-list" class="track-list"><div class="empty-library">♫<b>Tu biblioteca empieza aquí</b><span>Añade archivos de audio para empezar a escuchar.</span></div></div><div class="player-bar"><div class="now-playing-mini"><div class="mini-art">♫</div><div><strong id="mini-title">Nada reproduciéndose</strong><small id="mini-artist">Añade música a tu biblioteca</small></div></div><div class="transport"><button data-action="prev" aria-label="Anterior">⏮</button><button data-action="play" id="main-play" aria-label="Reproducir">▶</button><button data-action="next" aria-label="Siguiente">⏭</button></div><div class="timeline"><span id="current-time">0:00</span><input id="seek" type="range" min="0" max="1000" value="0"><span id="duration">0:00</span></div><label class="volume-control">VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".75"></label></div><div class="version">NANO OS <span>v0.2.0</span> · MUSIC EDITION</div></section>
-  <audio id="audio" preload="metadata"></audio><script src="js/kernel.js"></script>
+
+        <div class="device-column">
+          <div class="device">
+            <div class="device-top"><span class="model-mark">NANO<span>OS</span></span><span class="device-capacity">MUSIC PLAYER</span></div>
+            <div class="screen-frame"><div class="screen" id="screen">
+              <div class="statusbar"><span id="status-title">NANO OS</span><span class="status-right"><span id="battery">▰▰▰</span><span id="clock">09:41</span></span></div>
+              <div class="screen-content" id="screen-content"></div>
+              <div class="screen-footer" id="screen-footer">SELECT</div>
+            </div></div>
+            <div class="clickwheel" id="wheel" aria-label="Rueda de control">
+              <button class="wheel-key key-menu" data-action="menu" aria-label="Menú">MENU</button>
+              <button class="wheel-key key-prev" data-action="prev" aria-label="Anterior">◀◀</button>
+              <button class="wheel-key key-next" data-action="next" aria-label="Siguiente">▶▶</button>
+              <button class="wheel-key key-play" data-action="play" aria-label="Reproducir o pausar">▶Ⅱ</button>
+              <button class="wheel-center" data-action="select" aria-label="Seleccionar"></button>
+            </div>
+            <div class="device-bottom"><span>DESIGNED FOR MUSIC</span><span>NANO OS · 01</span></div>
+          </div>
+          <div class="device-caption"><span></span> INTERACTIVE PLAYER <b>·</b> CLICK WHEEL</div>
+        </div>
+      </section>
+
+      <section class="library" id="library">
+        <div class="section-head">
+          <div><p class="eyebrow">YOUR PERSONAL COLLECTION</p><h2>Tu biblioteca musical.</h2><p class="section-description">Añade tus archivos y empieza a escuchar. Tu música permanece en este dispositivo.</p></div>
+          <label class="import-button" for="audio-files"><span>＋</span> Añadir música</label>
+          <input id="audio-files" type="file" accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac" multiple hidden>
+        </div>
+        <div class="library-toolbar"><span id="track-count">0 canciones</span><span id="storage-status">ALMACENAMIENTO LOCAL</span></div>
+        <div id="track-list" class="track-list"><div class="empty-library"><div class="empty-disc">♫</div><strong>Tu colección empieza aquí</strong><p>Selecciona archivos MP3, M4A, AAC, OGG o WAV para incorporarlos a tu biblioteca.</p><label class="empty-action" for="audio-files">Seleccionar archivos</label></div></div>
+        <div class="player-bar">
+          <div class="now-playing-mini"><div class="mini-art">♫</div><div class="mini-meta"><strong id="mini-title">Nada reproduciéndose</strong><small id="mini-artist">Añade música a tu biblioteca</small></div></div>
+          <div class="transport"><button data-action="prev" aria-label="Anterior">⏮</button><button class="main-play" data-action="play" id="main-play" aria-label="Reproducir">▶</button><button data-action="next" aria-label="Siguiente">⏭</button></div>
+          <div class="timeline"><span id="current-time">0:00</span><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Posición"><span id="duration">0:00</span></div>
+          <label class="volume-control">VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".75" aria-label="Volumen"></label>
+        </div>
+        <div class="privacy-note"><span>◈</span> Tus archivos se guardan localmente. No se envían a ningún servidor.</div>
+      </section>
+    </main>
+    <footer class="footer"><span>NANO OS <b>V0.2.0</b></span><span>AN HOMAGE TO AN ICON. A NEW WAY TO LISTEN.</span><span>MADE FOR YOUR MUSIC.</span></footer>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+  <script src="js/kernel.js"></script>
 </body>
 </html>
